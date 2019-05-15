@@ -1,13 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
+import Hello from "./components/Hello";
 
 const instructions = Platform.select({
   ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
@@ -16,13 +9,20 @@ const instructions = Platform.select({
     "Shake or press menu button for dev menu"
 });
 
+type Props = {};
+
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome abc</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <View>
+          <Text style={styles.welcome}>Welcome</Text>
+          <Text style={styles.instructions}>
+            To get started, edit App.native.ts
+          </Text>
+          <Text style={styles.instructions}>{instructions}</Text>
+        </View>
+        <Hello name="Wil" enthusiasmLevel={1} />
       </View>
     );
   }
@@ -31,7 +31,7 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
   },
