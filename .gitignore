@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # OSX
 #
 .DS_Store
@@ -35,6 +37,7 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+yarn-debug.log*
 
 # BUCK
 buck-out/
@@ -54,3 +57,20 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

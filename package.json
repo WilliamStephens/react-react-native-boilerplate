@@ -3,29 +3,52 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "android-windows": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
+    "start:web": "react-scripts start",
+    "build:web": "react-scripts build",
+    "test:web": "react-scripts test",
+    "eject:web": "react-scripts eject",
+    "android": "react-native run-android",
+    "start:metro": "node node_modules/react-native/local-cli/cli.js start",
+    "test:native": "jest"
   },
   "dependencies": {
     "react": "16.8.3",
-    "react-native": "0.59.8"
+    "react-dom": "16.8.3",
+    "react-native": "0.59.8",
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
     "@babel/runtime": "7.4.4",
     "@types/jest": "^24.0.13",
+    "@types/node": "12.0.2",
     "@types/react": "^16.8.17",
+    "@types/react-dom": "16.8.3",
     "@types/react-native": "^0.57.56",
     "@types/react-test-renderer": "^16.8.1",
     "babel-jest": "24.8.0",
-    "jest": "24.8.0",
+    "jest": "24.7.1",
     "metro-react-native-babel-preset": "0.54.0",
     "react-native-typescript-transformer": "^1.2.12",
     "react-test-renderer": "16.8.3",
-    "typescript": "^3.4.5"
+    "typescript": "3.4.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

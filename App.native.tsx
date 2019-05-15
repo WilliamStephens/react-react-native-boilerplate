@@ -6,7 +6,7 @@ const instructions = Platform.select({
   ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
   android:
     "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
+    "Shake or press menu button for dev menu,\n"
 });
 
 type Props = {};
@@ -19,6 +19,9 @@ export default class App extends Component<Props> {
           <Text style={styles.welcome}>Welcome</Text>
           <Text style={styles.instructions}>
             To get started, edit App.native.ts
+          </Text>
+          <Text style={styles.instructions}>
+            You can also edit Hello.tsx to change the component below
           </Text>
           <Text style={styles.instructions}>{instructions}</Text>
         </View>
@@ -33,7 +36,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-evenly",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#F5FCFF",
+    margin: 50
   },
   welcome: {
     fontSize: 20,
